@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <div class="chat">
+      <div class="chatScreen" id="chatScreen">
+    
+      </div>
+      <input type="text" placeholder="you can chat" id="chatInput">
+      <br>
+      <button class="chatbutton" onclick="sendChat()">Send</button>
+  </div>
+  <div class="stats">
+    <div id="money">Money : 100</div>
+    <div id="range">(1)Range : 250</div>
+    <div id="healt">(2)Healt : 50</div>
+    <div id="damage">(3)Damage : 10</div>
+  </div>
+  <div class="sortedData" id="sortedData">
+      <h3 style="color:#fff;font-weight: bolder;">Leader Board</h3>
+      <hr>
+      <ul>
+        <li>-</li>
+        <li>-</li>
+        <li>-</li>
+        <li>-</li>
+        <li>-</li>
+      </ul>
+  </div>
+
+
+    <canvas></canvas>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      const socket = io();
+    </script>
+    
+
+
+    <script src="bullet.js"></script>
+    <script src="machine.js"></script>
+    <script src="scritp.js"></script>
+</body>
+</html>
